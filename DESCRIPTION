@@ -1,10 +1,15 @@
 Package: silounloadr
-Title: Functions to convey and prep data from KIPP Chicago's Silo data warehouse to an R session.
+Title: Functions to convey and prep data from KIPP Chicago's Silo data warehouse
+    to an R session.
 Version: 0.0.0.9000
 Authors@R: person("Chris", "Haid", email = "chaid@kippchicago.org", role = c("aut", "cre"))
-Description: Functions to convey and prep data from KIPP Chicago's Silo data warehouse to an R session.
-This package allows KIPP Chicago data scientists to retrieve tables from silo with single line
-function calls
-Depends: R (>= 3.2.2)
+Description: Functions to convey and prep data from KIPP Chicago's Silo data
+    warehouse to an R session. This package allows KIPP Chicago data scientists to
+    retrieve tables from silo with single line function calls
+Depends:
+    R (>= 3.2.2)
 License: MIT
 LazyData: true
+Imports:
+    dplyr
+RoxygenNote: 5.0.1
