@@ -9,7 +9,7 @@
 #' the named database that can be used by `dplyr` calls in other functions in
 #' this package.
 #'
-#' @return
+#' @return a
 #' @export
 #'
 #' @examples

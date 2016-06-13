@@ -2,3 +2,6 @@
 
 export(connect_to_db)
 export(get_alumni)
+export(get_illuminate)
+export(get_kb)
+export(get_ps)
