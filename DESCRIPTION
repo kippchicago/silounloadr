@@ -7,7 +7,8 @@ Description: Functions to convey and prep data from KIPP Chicago's Silo data
     warehouse to an R session. This package allows KIPP Chicago data scientists to
     retrieve tables from silo with single line function calls
 Depends:
-    R (>= 3.2.2)
+    R (>= 3.2.2),
+    dplyr
 License: MIT
 LazyData: true
 Imports:

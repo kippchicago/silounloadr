@@ -1,17 +1,26 @@
-#' Collect table from Illuminate_mirror
+#' Collect table from PowerSchool_mirror
 #'
-#' @param table_name name of a table in illuminate mirror
+#' @param table_name name of a table in alumni mirror
 #'
-#' @return a dataframe
+#' @return a data.frame
 #' @export
+#'
 
-get_illuminate <- function(table_name){
+get_ps <- function(table_name){
 
   #check if sil_dbname_alumni_mirror exists; if not create it
 
-  if(!exists("silo_dbname_illuminate_mirror")) connect_to_db("illuminate_mirror")
+  if(!exists("silo_dbname_ps_mirror")) connect_to_db("ps_mirror")
+  if (!exists("silo_dbname_ps_mirror")) {
+    connect_to_db("PS_mirror")
+  } else {
+    if (!RSQLServer::dbIsValid(silo_dbname_ps_mirror$con)) {
+      connect_to_db("PS_mirror")
+    }
+  }
 
-  out <- dplyr::tbl(silo_dbname_illuminate_mirror, table_name)
+
+  out <- dplyr::tbl(silo_dbname_ps_mirror, table_name)
 
   names(out) <- tolower(names(out))
 

@@ -10,6 +10,13 @@ get_kb <- function(table_name){
   #check if sil_dbname_alumni_mirror exists; if not create it
 
   if(!exists("silo_dbname_kickboard")) connect_to_db("kickboard")
+  if (!exists("silo_dbname_kickboard")) {
+    connect_to_db("kickboard")
+  } else {
+    if (!RSQLServer::dbIsValid(silo_dbname_kickboard$con)) {
+      connect_to_db("kickboard")
+    }
+  }
 
   out <- dplyr::tbl(silo_dbname_kickboard, table_name)
 
