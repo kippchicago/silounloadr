@@ -9,10 +9,10 @@ Users will need to supply a `.Renviron` file in their home directory with
 the following variables set:
 
 *  `SILO_DBNAME_NWEA`
-*  `SILO_DBNAME_PS`
-*  `SILO_DBNAME_ILL`
-*  `SILO_DBNAME_ALUMNI`
-*  `SILO_DBNAME_KB`
+*  `SILO_DBNAME_PS_MIRROR`
+*  `SILO_DBNAME_ILLUMINATE_MIRROR`
+*  `SILO_DBNAME_ALUMNI_MIRROR`
+*  `SILO_DBNAME_KICKBOARD`
 *  `SILO_DBNAME_STMATH`
 *  `SILO_URL`
 *  `SILO_USER`
