@@ -12,5 +12,7 @@ Depends:
 License: MIT
 LazyData: true
 Imports:
-    dplyr
+    dplyr,
+    lubridate,
+    stringr
 RoxygenNote: 5.0.1
