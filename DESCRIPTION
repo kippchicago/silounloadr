@@ -14,5 +14,6 @@ LazyData: true
 Imports:
     dplyr,
     lubridate,
-    stringr
+    stringr,
+    RSQLServer
 RoxygenNote: 5.0.1
