@@ -12,7 +12,7 @@ Depends:
 License: MIT
 LazyData: true
 Imports:
-    dplyr,
+    dplyr (= 0.4.3),
     lubridate,
     stringr,
     RSQLServer
