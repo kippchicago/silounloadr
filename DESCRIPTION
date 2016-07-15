@@ -15,5 +15,6 @@ Imports:
     dplyr (>= 0.5),
     lubridate,
     stringr,
-    RSQLServer
+    RSQLServer,
+    bigrquery
 RoxygenNote: 5.0.1
