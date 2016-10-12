@@ -5,7 +5,7 @@
 #' @return a dataframe
 #' @export
 
-get_illuminate <- function(table_name){
+get_illuminate_mirror <- function(table_name){
 
   #check if sil_dbname_alumni_mirror exists; if not create it
 

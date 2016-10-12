@@ -5,20 +5,25 @@
 #' @return a dataframe
 #' @export
 
-get_alumni_db <- function(table_name){
+get_alumni_db <- function(table_name, collect = FALSE){
 
   #check if sil_dbname_alumni_mirror exists; if not create it
 
   if (!exists("bq_alumni_db")) {
     connect_to_bq("alumni_db")
   } else {
-    if (!RSQLServer::dbIsValid(bq_alumni_db$con)) {
+    if (!bigrquery::dbIsValid(bq_alumni_db$con)) {
       connect_to_bq("alumni_db")
     }
   }
 
 
   out <- dplyr::tbl(bq_alumni_db, table_name)
+
+  if (collect) {
+    out <- dplyr::collect(out)
+    names(out) <- tolower(names(out))
+  }
 
   out
 
