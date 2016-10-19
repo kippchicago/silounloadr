@@ -15,11 +15,12 @@ get_illuminate <- function(table_name,
   bq_dataset_name <- sprintf("bq_%s", dataset_name)
   #check if bq_illumiante exists; if not create it
   #connection_name <- sprintf("%s$con", bq_dataset_name)
-  bq_connection<-lazyeval::lazy_eval(bq_dataset_name, parent.frame())
 
   if (!exists(bq_dataset_name)) {
     connect_to_bq(dataset_name)
+    bq_connection <- lazyeval::lazy_eval(bq_dataset_name, parent.frame())
   } else {
+    bq_connection <- lazyeval::lazy_eval(bq_dataset_name, parent.frame())
     if (!bigrquery::dbIsValid(bq_connection$con)) {
       connect_to_bq(dataset_name)
     }
