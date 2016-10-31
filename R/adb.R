@@ -1,6 +1,7 @@
-#' Collect table from Alumni mirror
+#' Collect table from Alumni BQ mirror
 #'
 #' @param table_name name of a table in illuminate mirror
+#' @param collect if TRUE collect the table locally.
 #'
 #' @return a dataframe
 #' @export
