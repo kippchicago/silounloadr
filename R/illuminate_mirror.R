@@ -12,7 +12,7 @@ get_illuminate_mirror <- function(table_name){
   if (!exists("silo_dbname_illuminate_mirror")) {
     connect_to_db("Illuminate_mirror")
   } else {
-    if (!RSQLServer::dbIsValid(silo_dbname_illuminate_mirror$con)) {
+    if (!RSQLServer::dbIsValid(silo_dbname_illuminate_mirror$obj)) {
       connect_to_db("Illuminate_mirror")
     }
   }

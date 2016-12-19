@@ -12,7 +12,7 @@ get_alumni <- function(table_name){
   if (!exists("silo_dbname_alumni_mirror")) {
     connect_to_db("Alumni_mirror")
   } else {
-    if (!RSQLServer::dbIsValid(silo_dbname_alumni_mirror$con)) {
+    if (!RSQLServer::dbIsValid(silo_dbname_alumni_mirror$obj)) {
       connect_to_db("Alumni_mirror")
     }
   }
