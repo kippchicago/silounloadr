@@ -14,7 +14,7 @@ get_nwea <- function(table_name){
   if (!exists("silo_dbname_nwea")) {
     connect_to_db("NWEA")
   } else {
-    if (!RSQLServer::dbIsValid(silo_dbname_nwea$con)) {
+    if (!RSQLServer::dbIsValid(silo_dbname_nwea$obj)) {
       connect_to_db("NWEA")
     }
   }
