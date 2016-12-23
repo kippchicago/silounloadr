@@ -15,7 +15,6 @@ Imports:
     dplyr,
     lubridate,
     stringr,
-    RSQLServer,
     bigrquery,
     lazyeval
 RoxygenNote: 5.0.1
