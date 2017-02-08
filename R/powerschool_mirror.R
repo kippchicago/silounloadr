@@ -14,7 +14,7 @@ get_ps <- function(table_name){
   if (!exists("silo_dbname_ps_mirror")) {
     connect_to_db("PS_mirror")
   } else {
-    if (!RSQLServer::dbIsValid(silo_dbname_ps_mirror$obj)) {
+    if (!RSQLServer::dbIsValid(dplyr::con_acquire(silo_dbname_ps_mirror))) {
       connect_to_db("PS_mirror")
     }
   }
