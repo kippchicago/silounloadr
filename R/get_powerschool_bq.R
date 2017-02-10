@@ -17,7 +17,7 @@ get_powerschool <- function(table_name = 'students',
   if (!exists("bq_powerschool_ps")) {
     connect_to_bq("powerschool_ps")
   } else {
-    if (!bigrquery::dbIsValid(bq_powerschool_ps$con)) {
+    if (!bigrquery::dbIsValid(dplyr::con_acquire(bq_powerschool_ps))) {
       connect_to_bq("powerschool_ps")
     }
   }

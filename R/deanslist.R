@@ -17,7 +17,7 @@ get_deanslist <- function(table_name = 'suspensions',
   if (!exists("bq_deanslist")) {
     connect_to_bq("deanslist")
   } else {
-    if (!bigrquery::dbIsValid(bq_deanslist$con)) {
+    if (!bigrquery::dbIsValid(dplyr::con_acquire(bq_deanslist))) {
       connect_to_bq("deanslist")
     }
   }
