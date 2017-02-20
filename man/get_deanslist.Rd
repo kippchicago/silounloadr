@@ -2,7 +2,7 @@
 % Please edit documentation in R/deanslist.R
 \name{get_deanslist}
 \alias{get_deanslist}
-\title{Collect tables from DeansList on PARCC}
+\title{Collect tables from DeansList}
 \usage{
 get_deanslist(table_name = "suspensions", collect = FALSE)
 }
@@ -16,6 +16,6 @@ Default is `FALSE`.}
 a data.frame
 }
 \description{
-Collect tables from DeansList on PARCC
+Collect tables from DeansList
 }
 

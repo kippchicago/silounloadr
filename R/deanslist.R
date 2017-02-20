@@ -1,4 +1,4 @@
-#' Collect tables from DeansList on PARCC
+#' Collect tables from DeansList
 #'
 #' @param table_name name of a table from the DeansList Mirror on BigQuery
 #' @param collect whether or not table should be pulled into local R session.
