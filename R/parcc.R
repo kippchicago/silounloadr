@@ -23,7 +23,7 @@ get_parcc <- function(table_name = 'parcc_student_results',
   }
 
 
-  out <- dplyr::tbl(bq_parcc, table_name)
+  out <- dplyr:::tbl.src_dbi(bq_parcc, table_name)
 
   if (collect) {
     out <- dplyr::collect(out)

@@ -23,7 +23,7 @@ get_deanslist <- function(table_name = 'suspensions',
   }
 
 
-  out <- dplyr::tbl(bq_deanslist, table_name)
+  out <- dplyr:::tbl.src_dbi(bq_deanslist, table_name)
 
   if (collect) {
     out <- dplyr::collect(out)

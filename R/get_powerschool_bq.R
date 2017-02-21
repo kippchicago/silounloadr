@@ -23,7 +23,7 @@ get_powerschool <- function(table_name = 'students',
   }
 
 
-  out <- dplyr::tbl(bq_powerschool_ps, table_name)
+  out <- dplyr:::tbl.src_dbi(bq_powerschool_ps, table_name)
 
   if (collect) {
     out <- dplyr::collect(out)
