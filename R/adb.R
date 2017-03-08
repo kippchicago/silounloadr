@@ -18,8 +18,9 @@ get_alumni_db <- function(table_name, collect = FALSE){
     }
   }
 
-
-  out <- dplyr:::tbl.src_dbi(bq_alumni_db, table_name)
+  # Sove for forthcoming dplyr release
+  #out <- dplyr:::tbl.src_dbi(bq_alumni_db, table_name)
+  out <- dplyr::tbl(bq_alumni_db, table_name)
 
   if (collect) {
     out <- dplyr::collect(out)

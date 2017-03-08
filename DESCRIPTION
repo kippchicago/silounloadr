@@ -17,4 +17,5 @@ Imports:
     stringr,
     bigrquery,
     lazyeval
+Remotes: hadley/dplyr@63d4a9f5
 RoxygenNote: 5.0.1

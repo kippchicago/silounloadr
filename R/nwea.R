@@ -21,8 +21,10 @@ get_nwea <- function(table_name){
 
   out <- dplyr::tbl(silo_dbname_nwea, dplyr::sql(sprintf('SELECT * FROM %s', table_name)))
 
-#  names(out) <- tolower(names(out))
+  out<-dplyr::collect(out)
 
-  dplyr::collect(out)
+  names(out) <- tolower(names(out))
+
+  out
 
 }
