@@ -1,6 +1,6 @@
-#' Collect tables from DeansList
+#' Collect tables from TeachBoost
 #'
-#' @param table_name name of a table from the DeansList Mirror on BigQuery
+#' @param table_name name of a table from the \code{teachboost} dataset on BigQuery
 #' @param collect whether or not table should be pulled into local R session.
 #' Default is `FALSE`.
 #'
