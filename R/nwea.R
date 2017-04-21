@@ -23,7 +23,7 @@ get_nwea <- function(table_name){
 
   out<-dplyr::collect(out)
 
-  names(out) <- tolower(names(out))
+  #names(out) <- tolower(names(out))
 
   out
 
