@@ -21,7 +21,7 @@ get_illuminate <- function(table_name,
     bq_connection <- lazyeval::lazy_eval(bq_dataset_name, parent.frame())
   } else {
     bq_connection <- lazyeval::lazy_eval(bq_dataset_name, parent.frame())
-    if (!bigrquery::dbIsValid(dplyr::con_acquire(bq_connection))) {
+    if (!DBI::dbIsValid(bq_connection)) {
       connect_to_bq(dataset_name)
     }
   }

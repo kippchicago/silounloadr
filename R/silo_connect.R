@@ -30,11 +30,18 @@ connect_to_db <- function(db_name) {
 
   connection_name <- tolower(db_name)
 
-  conn <- RSQLServer::src_sqlserver(server = host,
-                           database = db,
-                           properties = list(user = user,
-                                             password = pwd)
-                           )
+  #conn <- RSQLServer::src_sqlserver(server = host,
+  #                         database = db,
+  #                         properties = list(user = user,
+  #                                           password = pwd)
+  #                         )
+
+  conn <- DBI::dbConnect(RSQLServer::SQLServer(),
+                         server = host,
+                                    database = db,
+                                    properties = list(user = user,
+                                                      password = pwd)
+  )
 
   # Using a call to global so that this connection object is only made once
   # and is available for all get_* functions

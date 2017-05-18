@@ -1,7 +1,7 @@
 Package: silounloadr
 Title: Functions to convey and prep data from KIPP Chicago's Silo data warehouse
     to an R session.
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person("Chris", "Haid", email = "chaid@kippchicago.org", role = c("aut", "cre"))
 Description: Functions to convey and prep data from KIPP Chicago's Silo data
     warehouse to an R session. This package allows KIPP Chicago data scientists to
@@ -12,10 +12,15 @@ Depends:
 License: MIT
 LazyData: true
 Imports:
+    DBI,
+    dbplyr,
     dplyr,
     lubridate,
-    stringr,
     bigrquery,
-    lazyeval
-Remotes: hadley/dplyr@63d4a9f5
+    stringr,
+    lazyeval,
+    RSQLServer
+Remotes: 
+    hadley/dplyr
+    imanuelcostigan/RSQLServer  
 RoxygenNote: 5.0.1

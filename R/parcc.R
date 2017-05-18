@@ -17,7 +17,7 @@ get_parcc <- function(table_name = 'parcc_student_results',
   if (!exists("bq_parcc")) {
     connect_to_bq("parcc")
   } else {
-    if (!bigrquery::dbIsValid(dplyr::con_acquire(bq_parcc))) {
+    if (!DBI::dbIsValid(bq_parcc)) {
       connect_to_bq("parcc")
     }
   }

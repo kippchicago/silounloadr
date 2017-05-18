@@ -13,7 +13,7 @@ get_kb <- function(table_name){
   if (!exists("silo_dbname_kickboard")) {
     connect_to_db("kickboard")
   } else {
-    if (!RSQLServer::dbIsValid(silo_dbname_kickboard$obj)) {
+    if (!DBI::dbIsValid(silo_dbname_kickboard)) {
       connect_to_db("kickboard")
     }
   }
