@@ -13,7 +13,7 @@ get_alumni_db <- function(table_name, collect = FALSE){
   if (!exists("bq_alumni_db")) {
     connect_to_bq("alumni_db")
   } else {
-    if (!bigrquery::dbIsValid(dplyr::con_acquire(bq_alumni_db))) {
+    if (!DBI::dbIsValid(bq_alumni_db)) {
       connect_to_bq("alumni_db")
     }
   }

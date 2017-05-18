@@ -17,7 +17,7 @@ get_teachboost <- function(table_name = 'forms',
   if (!exists("bq_teachboost")) {
     connect_to_bq("teachboost")
   } else {
-    if (!bigrquery::dbIsValid(dplyr::con_acquire(bq_teachboost))) {
+    if (!DBI::dbIsValid(bq_teachboost)) {
       connect_to_bq("teachboost")
     }
   }
