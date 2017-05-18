@@ -22,5 +22,6 @@ Imports:
     RSQLServer
 Remotes: 
     hadley/dplyr,
-    imanuelcostigan/RSQLServer  
+    imanuelcostigan/RSQLServer,
+    rstats-db/bigrquery
 RoxygenNote: 5.0.1
