@@ -21,6 +21,6 @@ Imports:
     lazyeval,
     RSQLServer
 Remotes: 
-    hadley/dplyr
+    hadley/dplyr,
     imanuelcostigan/RSQLServer  
 RoxygenNote: 5.0.1
