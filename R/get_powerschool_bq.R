@@ -14,17 +14,17 @@ get_powerschool <- function(table_name = 'students',
   #check if bq_parcc exists; if not create it
 
 
-  if (!exists("bq_powerschool_ps")) {
-    connect_to_bq("powerschool_ps")
+  if (!exists("bq_powerschool")) {
+    connect_to_bq("powerschool")
   } else {
-    if (!DBI::dbIsValid(bq_powerschool_ps)) {
-      connect_to_bq("powerschool_ps")
+    if (!DBI::dbIsValid(bq_powerschool)) {
+      connect_to_bq("powerschool")
     }
   }
 
   #Save for forthcoming dply release
   #out <- dplyr:::tbl.src_dbi(bq_powerschool_ps, table_name)
-  out <- dplyr::tbl(bq_powerschool_ps, table_name)
+  out <- dplyr::tbl(bq_powerschool, table_name)
 
   if (collect) {
     out <- dplyr::collect(out)
