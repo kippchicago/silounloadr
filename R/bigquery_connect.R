@@ -28,7 +28,8 @@ connect_to_bq <- function(dataset_name) {
 
   conn <- DBI::dbConnect(bigrquery::dbi_driver(),
                          project = project_name,
-                         dataset = dataset_name
+                         dataset = dataset_name,
+                         use_legacy_sql = FALSE
                          )
 
   # Using a call to global so that this connection object is only made once
