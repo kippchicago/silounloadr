@@ -18,4 +18,3 @@ a data.frame
 \description{
 Collect table from PARCC
 }
-

@@ -21,4 +21,3 @@ Calculate PowerSchool TermId given first year of a school year
 \examples{
 calc_ps_termid(2015)
 }
-

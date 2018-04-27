@@ -25,4 +25,3 @@ this package.
 connect_to_bq('PARCC')
 
 }
-

@@ -15,4 +15,3 @@ a dataframe
 \description{
 Collect table from Illuminate_mirror
 }
-

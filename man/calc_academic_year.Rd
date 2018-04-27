@@ -24,4 +24,3 @@ Calculate School or Academic Year from date
 \examples{
 calc_academic_year('2014-09-15')
 }
-

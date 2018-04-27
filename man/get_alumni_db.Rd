@@ -17,4 +17,3 @@ a dataframe
 \description{
 Collect table from Alumni BQ mirror
 }
-

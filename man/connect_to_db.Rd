@@ -25,4 +25,3 @@ this package.
 connect_to_db('Alumni_mirror')
 
 }
-
