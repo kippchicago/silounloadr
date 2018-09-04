@@ -26,7 +26,7 @@ connect_to_bq <- function(dataset_name) {
 
   connection_name <- tolower(dataset_title)
 
-  conn <- DBI::dbConnect(bigrquery::dbi_driver(),
+  conn <- DBI::dbConnect(bigrquery::bigquery(),
                          project = project_name,
                          dataset = dataset_name,
                          use_legacy_sql = FALSE

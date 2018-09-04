@@ -36,12 +36,14 @@ connect_to_db <- function(db_name) {
   #                                           password = pwd)
   #                         )
 
-  conn <- DBI::dbConnect(RSQLServer::SQLServer(),
-                         server = host,
-                                    database = db,
-                                    properties = list(user = user,
-                                                      password = pwd)
-  )
+  conn <- DBI::dbConnect(odbc::odbc(),
+                         driver = "FreeTDS",
+                         host = host,
+                         database = db,
+                         uid = user,
+                         pwd = pwd
+                         )
+
 
   # Using a call to global so that this connection object is only made once
   # and is available for all get_* functions
