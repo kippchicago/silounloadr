@@ -1,6 +1,6 @@
 #' Create connection to BigQuery warehouse and return object to global environment
 #'
-#' @param dataset name in BigQuery project  which will be connected to.
+#' @param dataset_name name in BigQuery project  which will be connected to.
 #'
 #' @description This makes a connection to BigQuery via `bigrquery`.  This call requires
 #' that system environment variable for BigQuery are set (typically with a an `.Renviron`

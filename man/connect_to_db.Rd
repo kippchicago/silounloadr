@@ -10,7 +10,7 @@ connect_to_db(db_name)
 \item{db_name}{database name which will be connected to.}
 }
 \value{
-a
+a connection object
 }
 \description{
 This makes a connection to Silo via `RSQLServer`.  This call requires
@@ -22,6 +22,6 @@ this package.
 }
 \examples{
 
-connect_to_db('Alumni_mirror')
+
 
 }

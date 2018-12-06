@@ -7,7 +7,7 @@
 connect_to_bq(dataset_name)
 }
 \arguments{
-\item{dataset}{name in BigQuery project  which will be connected to.}
+\item{dataset_name}{name in BigQuery project  which will be connected to.}
 }
 \value{
 a src object

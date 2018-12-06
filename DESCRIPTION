@@ -1,7 +1,7 @@
 Package: silounloadr
 Title: Functions to convey and prep data from KIPP Chicago's Silo data warehouse
     to an R session.
-Version: 0.0.1
+Version: 1.0.0
 Authors@R: person("Chris", "Haid", email = "chaid@kippchicago.org", role = c("aut", "cre"))
 Description: Functions to convey and prep data from KIPP Chicago's Silo data
     warehouse to an R session. This package allows KIPP Chicago data scientists to

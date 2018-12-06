@@ -9,12 +9,12 @@
 #' the named database that can be used by `dplyr` calls in other functions in
 #' this package.
 #'
-#' @return a
+#' @return a connection object
 #' @export
 #'
 #' @examples
 #'
-#' connect_to_db('Alumni_mirror')
+#'
 #'
 connect_to_db <- function(db_name) {
 
