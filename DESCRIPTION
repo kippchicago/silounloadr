@@ -20,7 +20,4 @@ Imports:
     stringr,
     lazyeval,
     odbc
-Remotes:
-    hadley/dplyr,
-    rstats-db/bigrquery
 RoxygenNote: 6.1.0
