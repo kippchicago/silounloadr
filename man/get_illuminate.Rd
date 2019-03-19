@@ -7,7 +7,14 @@
 get_illuminate(table_name, schema = "dna_assessments", collect = FALSE)
 }
 \arguments{
-\item{table_name}{name of a table in illuminate mirror}
+\item{table_name}{name of a table in illuminate}
+
+\item{schema}{name of a table in illuminate schema that's
+appended to the  dataset name (e.g., `public` for `illuminate_public`,
+`dna` for `illuminate_dna`)}
+
+\item{collect}{Whether to maintain data in BigQuery (`TRUE`) or to pull down
+to your local environment (`FALSE`)}
 }
 \value{
 a dataframe
