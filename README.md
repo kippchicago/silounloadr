@@ -17,3 +17,6 @@ the following variables set:
 *  `SILO_URL`
 *  `SILO_USER`
 *  `SILO_PWD`
+# Instillation 
+
+```install_github("kippchicago/silounloadr")```
