@@ -19,6 +19,6 @@ the following variables set:
 *  `SILO_PWD`
 # Instillation 
 
-```install.packages("devtools")```
-```library(devtools)```
-```install_github("kippchicago/silounloadr")```
+1. ```install.packages("devtools")```
+1. ```library(devtools)```
+1. ```install_github("kippchicago/silounloadr")```
